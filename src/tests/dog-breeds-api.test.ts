@@ -59,23 +59,23 @@ describe('Dog Breeds API', () => {
     expect(response).toEqual(['__MOCK__'])
   })
   it('should thow an error when fetching a list of breeds', async () => {
-    httpService.get.mockImplementationOnce(() => Promise.reject())
+    httpService.get.mockImplementationOnce(() => Promise.resolve({}))
     await expect(dogBreedsApi.breedsList()).rejects.toThrow('Error fetching list of breeds')
   })
   it('should thow an error when fetching a random image by breed', async () => {
-    httpService.get.mockImplementationOnce(() => Promise.reject())
+    httpService.get.mockImplementationOnce(() => Promise.resolve({}))
     await expect(dogBreedsApi.imageByBreed('')).rejects.toThrow('Error fetching image by breed')
   })
   it('should thow an error when fetching a random image by sub-breed', async () => {
-    httpService.get.mockImplementationOnce(() => Promise.reject())
+    httpService.get.mockImplementationOnce(() => Promise.resolve({}))
     await expect(dogBreedsApi.imageBySubBreed('', '')).rejects.toThrow('Error fetching image by sub-breed')
   })
   it('should thow an error when fetching a list of images by breed', async () => {
-    httpService.get.mockImplementationOnce(() => Promise.reject())
+    httpService.get.mockImplementationOnce(() => Promise.resolve({}))
     await expect(dogBreedsApi.imageListByBreed('')).rejects.toThrow('Error fetching list of images by breed')
   })
   it('should thow an error when fetching a list of images by sub-breed', async () => {
-    httpService.get.mockImplementationOnce(() => Promise.reject())
+    httpService.get.mockImplementationOnce(() => Promise.resolve({}))
     await expect(dogBreedsApi.imageListBySubBreed('', '')).rejects.toThrow('Error fetching list of images by sub-breed')
   })
 })
