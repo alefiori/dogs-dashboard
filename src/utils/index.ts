@@ -1,2 +1,2 @@
 export * from './http-service'
-export * from './dog-images-api'
+export * from './dog-breeds-api'

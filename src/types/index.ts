@@ -1,1 +1,1 @@
-export * from './dog-images'
+export * from './dog-breeds'
